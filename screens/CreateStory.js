@@ -26,7 +26,6 @@ export default class CreateStory extends Component {
             fontsLoaded: false,
             previewImage: 'image_1',
             dropDownHeight: 40
-
         };
     }
     async loadFontAsync() {
@@ -121,7 +120,7 @@ export default class CreateStory extends Component {
                             <TextInput onChangeText={(description) => {
                                 this.setState({ description })
                             }}
-                                style={[styles.inputFont,styles.inputFontExtra,styles.inputTextBig]}
+                                style={[styles.inputFont, styles.inputFontExtra, styles.inputTextBig]}
                                 placeholder={'DESCRIPTION'}
                                 placeholderTextColor={'white'}
                                 multiline={true}
@@ -130,7 +129,7 @@ export default class CreateStory extends Component {
                             <TextInput onChangeText={(story) => {
                                 this.setState({ story })
                             }}
-                                style={[styles.inputFont,styles.inputFontExtra,styles.inputTextBig]}
+                                style={[styles.inputFont, styles.inputFontExtra, styles.inputTextBig]}
                                 placeholder={'STORY'}
                                 placeholderTextColor={'white'}
                                 multiline={true}
@@ -139,7 +138,7 @@ export default class CreateStory extends Component {
                             <TextInput onChangeText={(moral) => {
                                 this.setState({ moral })
                             }}
-                                style={[styles.inputFont,styles.inputFontExtra,styles.inputTextBig]}
+                                style={[styles.inputFont, styles.inputFontExtra, styles.inputTextBig]}
                                 placeholder={'MORAL OF THE STORY'}
                                 placeholderTextColor={'white'}
                                 multiline={true}

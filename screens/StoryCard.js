@@ -3,12 +3,9 @@ import {
     View,
     Text,
     StyleSheet,
-    SafeAreaView,
-    Platform,
-    StatusBar,
-    Image, FlatList
+    Image,
+    TouchableOpacity
 } from "react-native";
-
 import { RFValue } from "react-native-responsive-fontsize";
 import AppLoading from "expo-app-loading";
 import Ionicons from "react-native-vector-icons/Ionicons"
@@ -40,7 +37,10 @@ export default class StoryCard extends Component {
             return <AppLoading />;
         } else {
             return (
-                <View style={styles.container}>
+                <TouchableOpacity style={styles.container}
+                onPress={()=>{
+                    this.props.navigation.navigate("StoryScreen", {story:this.props.story})
+                }}>
                     <View style={styles.cardContainer}>
                         <Image source={require("../assets/story_image_1.png")} style={styles.storyImage} />
                         <View style={styles.titleContainer}>
@@ -61,7 +61,7 @@ export default class StoryCard extends Component {
                             </View>
                         </View>
                     </View>
-                </View>
+                </TouchableOpacity>
             )
         }
     }
